@@ -1,4 +1,5 @@
 const strictEqual = require("chai").assert.strictEqual;
+import { solution } from "../romanNumeralsDecoder";
 
 function doTest(romanString, expected) {
   const actual = solution(romanString);
