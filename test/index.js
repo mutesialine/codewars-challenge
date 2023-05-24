@@ -1,5 +1,6 @@
-const strictEqual = require("chai").assert.strictEqual;
-import { solution } from "../romanNumeralsDecoder";
+import { solution } from "../romanNumeralsDecoder/index.js";
+import chai from "chai";
+const strictEqual = chai.assert.strictEqual;
 
 function doTest(romanString, expected) {
   const actual = solution(romanString);
