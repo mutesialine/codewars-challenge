@@ -4,7 +4,7 @@
  * @returns {number} - The decimal value of the Roman numeral.
  */
 
-const romanNumeral = {
+const ROMAN_NUMERAL = {
   I: 1,
   V: 5,
   X: 10,
@@ -15,7 +15,7 @@ const romanNumeral = {
 };
 export function solution(roman) {
   // Array of numbers that correspond to the Roman numeral
-  const arrOfNumbers = roman.split("").map((number) => romanNumeral[number]);
+  const arrOfNumbers = roman.split("").map((number) => ROMAN_NUMERAL[number]);
   // Perform the reduction to calculate the decimal value
   const result = arrOfNumbers.reduce(
     (sum, currentNumber, index, arrOfNumbers) => {
