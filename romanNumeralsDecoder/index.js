@@ -13,9 +13,10 @@ const ROMAN_NUMERAL = {
   D: 500,
   M: 1000,
 };
-export function solution(roman) {
+const solution = (roman) => {
   // Array of numbers that correspond to the Roman numeral
   const arrOfNumbers = roman.split("").map((number) => ROMAN_NUMERAL[number]);
+
   // Perform the reduction to calculate the decimal value
   const result = arrOfNumbers.reduce(
     (sum, currentNumber, index, arrOfNumbers) => {
@@ -29,4 +30,4 @@ export function solution(roman) {
   );
 
   return result;
-}
+};
