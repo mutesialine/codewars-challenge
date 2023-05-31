@@ -1,6 +1,6 @@
 const VOWELS_REGEX = /[euaio]/gi;
 
-function reverseVowels(string) {
+const reverseVowels = (string) => {
   const allVowels = string.match(VOWELS_REGEX);
   if (!allVowels) {
     return string;
@@ -21,4 +21,4 @@ function reverseVowels(string) {
   }
 
   return result;
-}
+};
