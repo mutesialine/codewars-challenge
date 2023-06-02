@@ -6,5 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "npx mocha"
+  },
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-plugin-unicorn": "^47.0.0"
   }
 }

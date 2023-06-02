@@ -14,10 +14,7 @@ const ROMAN_NUMERAL = {
   M: 1000,
 };
 const solution = (roman) => {
-  // Array of numbers that correspond to the Roman numeral
   const arrOfNumbers = roman.split("").map((number) => ROMAN_NUMERAL[number]);
-
-  // Perform the reduction to calculate the decimal value
   const result = arrOfNumbers.reduce(
     (sum, currentNumber, index, arrOfNumbers) => {
       // Check if the current number is less than the next number in the array to perform subtraction
