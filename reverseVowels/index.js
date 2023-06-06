@@ -1,4 +1,4 @@
-const VOWELS_REGEX = /[euaio]/gi;
+const VOWELS_REGEX = /[aeiou]/gi;
 
 const reverseVowels = (string) => {
   const allVowels = string.match(VOWELS_REGEX);
@@ -8,9 +8,8 @@ const reverseVowels = (string) => {
   if (!allVowels) {
     return string;
   }
-  for (let i = 0; i < string.length; i++) {
-    const letter = string[i];
-    if (letter.match(VOWELS_REGEX)) {
+  for (const letter of string) {
+    if (VOWELS_REGEX.test(letter)) {
       result += reversedVowels[vowelIndex];
       vowelIndex++;
     } else {
