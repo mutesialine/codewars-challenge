@@ -13,14 +13,13 @@ const ROMAN_NUMERAL = {
   D: 500,
   M: 1000,
 };
-export function solution(roman) {
-  // Array of numbers that correspond to the Roman numeral
-  const arrOfNumbers = roman.split("").map((number) => ROMAN_NUMERAL[number]);
-  // Perform the reduction to calculate the decimal value
-  const result = arrOfNumbers.reduce(
-    (sum, currentNumber, index, arrOfNumbers) => {
+const solution = (roman) => {
+  const arrayOfNumbers = [...roman].map((number) => ROMAN_NUMERAL[number]);
+  // eslint-disable-next-line unicorn/no-array-reduce
+  const result = arrayOfNumbers.reduce(
+    (sum, currentNumber, index, arrayOfNumbers_) => {
       // Check if the current number is less than the next number in the array to perform subtraction
-      if (currentNumber < arrOfNumbers[index + 1]) {
+      if (currentNumber < arrayOfNumbers_[index + 1]) {
         return sum - currentNumber;
       }
       return sum + currentNumber;
@@ -29,4 +28,4 @@ export function solution(roman) {
   );
 
   return result;
-}
+};
